@@ -2,11 +2,23 @@
   "name": "100p",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rodrigoangeli.github.io/100p",
+  "homepage": "https://rodrigoangeli.github.io/",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.3",
+    "@reduxjs/toolkit": "^1.9.1",
+    "axios": "^1.2.2",
+    "clsx": "^1.2.1",
+    "framer-motion": "^8.1.5",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.6.1",
+    "react-scripts": "5.0.1",
+    "redux-logger": "^3.0.6",
+    "styled-components": "^5.3.6"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -35,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "tailwindcss": "^3.2.4"
   }
 }
