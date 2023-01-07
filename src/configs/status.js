@@ -1,7 +1,7 @@
 const statusInfo = {
   tbd: {
     label: "To be done",
-    icon: "heroicons-outline:x",
+    icon: "heroicons-outline:x-mark",
   },
   progress: {
     label: "In progress",

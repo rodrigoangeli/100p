@@ -1,38 +1,19 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
 import { data } from "./components/data";
-import styled from "styled-components";
-import { TextField, Button } from "@mui/material";
-import { openModal } from "../../../../store/modal";
-import { motion } from "framer-motion";
-
-const Image = styled("img")(({ theme }) => ({
-  width: "100%",
-  maxWidth: "400px",
-  borderRadius: theme.border.radius,
-  margin: "0 auto",
-}));
-
-const Box = styled("div")(({ theme }) => ({
-  background: "#1e212c",
-  boxShadow: theme.shadow.main,
-  padding: 15,
-  borderRadius: theme.border.radius,
-}));
+import { TextField, Button, Box } from "@mui/material";
+import Animated from "src/layout/animated";
+import { Image, BoxCard, Title, Subtitle, Score, Icon } from "./styles/styles";
 
 const Quiz = (props) => {
-  const dispatch = useDispatch();
   const [score, setScore] = useState(0);
-  const [quizStatus, setQuizStatus] = useState(0);
   const [allData, setAllData] = useState(data);
   const [currentArtist, setCurrentArtist] = useState(null);
-  const [inputText, setInputText] = useState(null);
+  const [inputText, setInputText] = useState("");
+  const [answerResult, setAnswerResult] = useState(null);
 
   useEffect(() => {
-    if (!currentArtist) {
-      randomArtist(allData);
-    }
-  }, []);
+    randomArtist(allData);
+  }, [allData]);
 
   const randomArtist = (arr) => {
     var n = Math.floor(Math.random() * arr.length);
@@ -42,49 +23,85 @@ const Quiz = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputText === currentArtist.name) {
+      setAnswerResult("check");
       setScore(score + 1);
       setAllData(allData.filter(({ name }) => name !== currentArtist.name));
     } else {
-      setQuizStatus(-1);
-      dispatch(
-        openModal({
-          children: <>asdasdas</>,
-        })
-      );
+      setAnswerResult("x-mark");
     }
+    setInputText("");
   };
+
+  useEffect(() => {
+    if (answerResult) {
+      let timer1 = setTimeout(() => setAnswerResult(null), 250);
+      return () => {
+        clearTimeout(timer1);
+      };
+    }
+  }, [answerResult]);
 
   return (
     <>
       {currentArtist && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 0.1 } }}
-          className="flex grow justify-center items-center"
-        >
-          <Box className="flex">
-            <Image src={currentArtist.images[0].url} />
-
+        <Animated>
+          <Title>Do you know who this is?</Title>
+          <Subtitle>Show your knowledge by guessing this singer/band</Subtitle>
+          <div className="flex items-end my-4">
+            <BoxCard>
+              <Image src={currentArtist.images[1].url} />
+            </BoxCard>
             <div className="ml-4">
-              <h5>What do you know about</h5>
-              <form onSubmit={handleSubmit}>
-                <TextField
-                  placeholder="Type your guess"
-                  className="w-full mb-8"
-                  onChange={(event) => setInputText(event.target.value)}
-                />
-                <Button
-                  className="w-full"
-                  variant="contained"
-                  color="primary"
-                  type="submit"
-                >
-                  submit
-                </Button>
-              </form>
+              <div className="text-center mb-8">
+                <p>Your score</p>
+                <Score>
+                  {answerResult ? (
+                    <Icon
+                      answerResult={answerResult}
+                      className="w-5 align-middle p-0.5"
+                    >
+                      {`heroicons-outline:${answerResult}`}
+                    </Icon>
+                  ) : (
+                    score
+                  )}
+                </Score>
+              </div>
+              <BoxCard>
+                <div>
+                  <form onSubmit={handleSubmit}>
+                    <Box
+                      sx={{
+                        width: 350,
+                        maxWidth: "100%",
+                      }}
+                    >
+                      <TextField
+                        label="Type your guess"
+                        className="w-full"
+                        variant="filled"
+                        onChange={(event) => setInputText(event.target.value)}
+                        value={inputText}
+                      />
+                    </Box>
+                    <div className="mt-2">
+                      <Button
+                        className="w-full"
+                        variant="contained"
+                        color="primary"
+                        fullWidth
+                        type="submit"
+                        disableRipple
+                      >
+                        submit
+                      </Button>
+                    </div>
+                  </form>
+                </div>
+              </BoxCard>
             </div>
-          </Box>
-        </motion.div>
+          </div>
+        </Animated>
       )}
     </>
   );

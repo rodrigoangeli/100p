@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Routes from "./Routes";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Theme from "./theme/theme";
 import "./styles/tailwind.css";
 import "./styles/base.css";
@@ -14,10 +14,10 @@ root.render(
   <>
     <Provider store={store}>
       <Theme>
-        <BrowserRouter>
+        <HashRouter>
           <Modal />
           <Routes />
-        </BrowserRouter>
+        </HashRouter>
       </Theme>
     </Provider>
   </>

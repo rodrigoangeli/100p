@@ -2,6 +2,10 @@
   "name": "100p",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodrigoangeli/100p.git"
+  },
   "homepage": "https://rodrigoangeli.github.io/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -11,22 +15,25 @@
     "axios": "^1.2.2",
     "clsx": "^1.2.1",
     "framer-motion": "^8.1.5",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "redux-logger": "^3.0.6",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "uuid": "^9.0.0"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +55,9 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0",
+    "promise": "^8.3.0",
+    "react-app-alias": "^2.2.2",
+    "react-app-rewired": "^2.2.1",
     "tailwindcss": "^3.2.4"
   }
 }

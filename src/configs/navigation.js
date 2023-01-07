@@ -1,103 +1,99 @@
 //Anchors
-import Home from "../routes/Home";
+import Home from "../routes/home/Home";
 import NotFound from "../routes/NotFound";
 import Layout from "../layout/layout";
 
 //Projects
-import DailyReadingPlan from "../routes/projects/simple-projects/daily-reading-plan/DailyReadingPlan";
-import Quiz from "../routes/projects/simple-projects/quiz/Quiz";
-import EtchASketch from "../routes/projects/simple-projects/etch-sketch/EtchASketch";
-import Calculator from "../routes/projects/simple-projects/calculator/Calculator";
-import FormValidation from "../routes/projects/simple-projects/form-validation/FormValidation";
-import Library from "../routes/projects/simple-projects/library/Library";
-import WeatherWebsite from "../routes/projects/simple-projects/weather-website/WeatherWebsite";
-import TodoList from "../routes/projects/simple-projects/todo-list/TodoList";
-import Pomodoro from "../routes/projects/simple-projects/pomodoro/Pomodoro";
-import GridPicturesAnimals from "../routes/projects/simple-projects/grid-pictures-animals/GridPicturesAnimals";
+import Calendar from "routes/projects/simple-projects/calendar/Calendar";
+import Quiz from "routes/projects/simple-projects/quiz/Quiz";
+import Calculator from "routes/projects/simple-projects/calculator/Calculator";
+import WeatherWebsite from "routes/projects/simple-projects/weather-website/WeatherWebsite";
+import TodoList from "routes/projects/simple-projects/todo-list/TodoList";
+import Pomodoro from "routes/projects/simple-projects/pomodoro/Pomodoro";
+import GridPicturesAnimals from "routes/projects/simple-projects/grid-pictures-animals/GridPicturesAnimals";
 
-import Chess from "../routes/projects/games/chess/Chess";
-import ZombieGame from "../routes/projects/games/2d-zombie-game/ZombieGame";
-import Minesweeper from "../routes/projects/games/minesweeper/Minesweeper";
-import Mario from "../routes/projects/games/mario/Mario";
-import BattleShip from "../routes/projects/games/battleship/BattleShip";
-import TicTacToe from "../routes/projects/games/tic-tac-toe/TicTacToe";
-import RockPaperScissors from "../routes/projects/games/rock-paper-scissors/RockPaperScissors";
-import OwnPlatformerGame from "../routes/projects/games/own-platformer-game/OwnPlatformerGame";
-import ProgrammingConcept from "../routes/projects/games/programming-concept/ProgrammingConcept";
-import Hangman from "../routes/projects/games/hangman/Hangman";
-import Pacman from "../routes/projects/games/pacman/Pacman";
-import PingPong from "../routes/projects/games/ping-pong/PingPong";
-import Tetris from "../routes/projects/games/tetris/Tetris";
-import GuessMySketch from "../routes/projects/games/guess-my-sketch/GuessMySketch";
-import EmulatorRetroGames from "../routes/projects/games/emulator-retro-games/EmulatorRetroGames";
+import Chess from "routes/projects/games/chess/Chess";
+import ZombieGame from "routes/projects/games/2d-zombie-game/ZombieGame";
+import Minesweeper from "routes/projects/games/minesweeper/Minesweeper";
+import Mario from "routes/projects/games/mario/Mario";
+import BattleShip from "routes/projects/games/battleship/BattleShip";
+import TicTacToe from "routes/projects/games/tic-tac-toe/TicTacToe";
+import RockPaperScissors from "routes/projects/games/rock-paper-scissors/RockPaperScissors";
+import OwnPlatformerGame from "routes/projects/games/own-platformer-game/OwnPlatformerGame";
+import ProgrammingConcept from "routes/projects/games/programming-concept/ProgrammingConcept";
+import Hangman from "routes/projects/games/hangman/Hangman";
+import Pacman from "routes/projects/games/pacman/Pacman";
+import PingPong from "routes/projects/games/ping-pong/PingPong";
+import Tetris from "routes/projects/games/tetris/Tetris";
+import GuessMySketch from "routes/projects/games/guess-my-sketch/GuessMySketch";
+import EmulatorRetroGames from "routes/projects/games/emulator-retro-games/EmulatorRetroGames";
 
-import ZipPostalCodeLookup from "../routes/projects/networking/zip-postal-code-lookup/ZipPostalCodeLookup";
-import CountryIPLookup from "../routes/projects/networking/country-lookup/CountryIPLookup";
+import ZipPostalCodeLookup from "routes/projects/networking/zip-postal-code-lookup/ZipPostalCodeLookup";
+import CountryIPLookup from "routes/projects/networking/country-lookup/CountryIPLookup";
 
-import FlexBoxGenerator from "../routes/projects/personal-tools/flex-box-generator/FlexBoxGenerator";
-import CssGridGenerator from "../routes/projects/personal-tools/css-grid-generator/CssGridGenerator";
-import UISelect from "../routes/projects/personal-tools/UISelect/UISelect";
-import CssLoaders from "../routes/projects/personal-tools/css-loaders/CssLoaders";
-import NoteTaker from "../routes/projects/personal-tools/note-taker/NoteTaker";
-import ClipPathGenerator from "../routes/projects/personal-tools/clip-generator/ClipPathGenerator";
-import NoteTakerForProgrammers from "../routes/projects/personal-tools/note-taker-for-programmers/NoteTakerForProgrammers";
-import BudgetTracker from "../routes/projects/personal-tools/budget-tracker/BudgetTracker";
-import ScriptToOrderPizza from "../routes/projects/personal-tools/script-to-order-pizza/ScriptToOrderPizza";
-import KanbanBoard from "../routes/projects/personal-tools/kanban-board/KanbanBoard";
-import ExportNotionToBlog from "../routes/projects/personal-tools/export-notion-to-blog/ExportNotionToBlog";
+import FlexBoxGenerator from "routes/projects/personal-tools/flex-box-generator/FlexBoxGenerator";
+import CssGridGenerator from "routes/projects/personal-tools/css-grid-generator/CssGridGenerator";
+import UISelect from "routes/projects/personal-tools/UISelect/UISelect";
+import CssLoaders from "routes/projects/personal-tools/css-loaders/CssLoaders";
+import NoteTaker from "routes/projects/personal-tools/note-taker/NoteTaker";
+import ClipPathGenerator from "routes/projects/personal-tools/clip-generator/ClipPathGenerator";
+import NoteTakerForProgrammers from "routes/projects/personal-tools/note-taker-for-programmers/NoteTakerForProgrammers";
+import BudgetTracker from "routes/projects/personal-tools/budget-tracker/BudgetTracker";
+import ScriptToOrderPizza from "routes/projects/personal-tools/script-to-order-pizza/ScriptToOrderPizza";
+import KanbanBoard from "routes/projects/personal-tools/kanban-board/KanbanBoard";
+import ExportNotionToBlog from "routes/projects/personal-tools/export-notion-to-blog/ExportNotionToBlog";
 
-import OnlineWhiteboard from "../routes/projects/online/online-whiteboard/OnlineWhiteboard";
-import GamifiedHabitTracker from "../routes/projects/online/gamified-habit-tracker/GamifiedHabitTracker";
-import RealTimeChatApp from "../routes/projects/online/real-time-chat-app/RealTimeChatApp";
-import VideoChat from "../routes/projects/online/video-chat/VideoChat";
+import OnlineWhiteboard from "routes/projects/online/online-whiteboard/OnlineWhiteboard";
+import GamifiedHabitTracker from "routes/projects/online/gamified-habit-tracker/GamifiedHabitTracker";
+import RealTimeChatApp from "routes/projects/online/real-time-chat-app/RealTimeChatApp";
+import VideoChat from "routes/projects/online/video-chat/VideoChat";
 
-import PasswordCracker from "../routes/projects/machine-learning/password-cracker/PasswordCracker";
-import ConvertSignLanguageToText from "../routes/projects/machine-learning/convert-sign-language-to-text/ConvertSignLanguageToText";
-import HandwrittenTodosToGoogleCalendar from "../routes/projects/machine-learning/handwritten-todos-to-google-calendar/HandwrittenTodosToGoogleCalendar";
-import GradeYourOwnEssay from "../routes/projects/machine-learning/grade-your-own-essay/GradeYourOwnEssay";
-import InsertAppointmentsGoogleCalendar from "../routes/projects/machine-learning/insert-appointments-google-calendar/InsertAppointmentsGoogleCalendar";
+import PasswordCracker from "routes/projects/machine-learning/password-cracker/PasswordCracker";
+import ConvertSignLanguageToText from "routes/projects/machine-learning/convert-sign-language-to-text/ConvertSignLanguageToText";
+import HandwrittenTodosToGoogleCalendar from "routes/projects/machine-learning/handwritten-todos-to-google-calendar/HandwrittenTodosToGoogleCalendar";
+import GradeYourOwnEssay from "routes/projects/machine-learning/grade-your-own-essay/GradeYourOwnEssay";
+import InsertAppointmentsGoogleCalendar from "routes/projects/machine-learning/insert-appointments-google-calendar/InsertAppointmentsGoogleCalendar";
 
-import DesignFreeFrontendMentor from "../routes/projects/clone-front/design-free-frontend-mentor/DesignFreeFrontendMentor";
-import DesignOnAwwwards from "../routes/projects/clone-front/design-on-awwwards/DesignOnAwwwards";
+import DesignFreeFrontendMentor from "routes/projects/clone-front/design-free-frontend-mentor/DesignFreeFrontendMentor";
+import DesignOnAwwwards from "routes/projects/clone-front/design-on-awwwards/DesignOnAwwwards";
+import RebuildNetflix from "routes/projects/clone-front/rebuild-netflix/RebuildNetflix";
+import RebuildFacebook from "routes/projects/clone-front/rebuild-facebook/RebuildFacebook";
+import RebuildInstagram from "routes/projects/clone-front/rebuild-instagram/RebuildInstagram";
+import RebuildGoogleCalendar from "routes/projects/clone-front/rebuild-google-calendar/RebuildGoogleCalendar";
+import RebuildTrello from "routes/projects/clone-front/rebuild-trello/RebuildTrello";
+import RebuildFeatherIcons from "routes/projects/clone-front/rebuild-feather-icons/RebuildFeatherIcons";
 
-import RebuildNetflix from "../routes/projects/clone-full-stack/rebuild-netflix/RebuildNetflix";
-import RebuildFacebook from "../routes/projects/clone-full-stack/rebuild-facebook/RebuildFacebook";
-import RebuildInstagram from "../routes/projects/clone-full-stack/rebuild-instagram/RebuildInstagram";
-import RebuildGoogleCalendar from "../routes/projects/clone-full-stack/rebuild-google-calendar/RebuildGoogleCalendar";
-import RebuildTrello from "../routes/projects/clone-full-stack/rebuild-trello/RebuildTrello";
-import RebuildFeatherIcons from "../routes/projects/clone-full-stack/rebuild-feather-icons/RebuildFeatherIcons";
+import PhotographyPortfolio from "routes/projects/cool-projects/photography-portfolio/PhotographyPortfolio";
+import PersonalPortfolio from "routes/projects/cool-projects/personal-portfolio/PersonalPortfolio";
+import GPATracker from "routes/projects/cool-projects/tracker/GPATracker";
+import CssCube from "routes/projects/cool-projects/css-cube/CssCube";
+import AudioVisualizer from "routes/projects/cool-projects/audio-visualizer/AudioVisualizer";
+import GameOfLife from "routes/projects/cool-projects/game-of-life/GameOfLife";
+import ControlTrelloDroneWithNode from "routes/projects/cool-projects/control-trello-drone-with-node/ControlTrelloDroneWithNode";
+import PersonalBlog from "routes/projects/cool-projects/personal-blog/PersonalBlog";
+import PasswordGenerator from "routes/projects/cool-projects/password-generator/PasswordGenerator";
+import FileOrganizer from "routes/projects/cool-projects/file-organizer/FileOrganizer";
+import PageScraper from "routes/projects/cool-projects/page-scraper/PageScraper";
+import AlarmClock from "routes/projects/cool-projects/alarm-clock/AlarmClock";
+import MP3Player from "routes/projects/cool-projects/mp3-player/MP3Player";
+import GifCreator from "routes/projects/cool-projects/gif-creator/GifCreator";
+import LearningPlatform from "routes/projects/cool-projects/learning-platform/LearningPlatform";
+import MarkdownToHTML from "routes/projects/cool-projects/markdown-to-html/MarkdownToHTML";
+import DesktopGUI from "routes/projects/cool-projects/desktop/DesktopGUI";
+import ContentAggregator from "routes/projects/cool-projects/content-aggregator/ContentAggregator";
+import RecipeForHomeIngredients from "routes/projects/cool-projects/recipe-for-home-ingredients/RecipeForHomeIngredients";
+import StockPorfolioTracker from "routes/projects/cool-projects/stock-porfolio-tracker/StockPorfolioTracker";
+import VideoEditor from "routes/projects/cool-projects/video-editor/VideoEditor";
 
-import PhotographyPortfolio from "../routes/projects/cool-projects/photography-portfolio/PhotographyPortfolio";
-import PersonalPortfolio from "../routes/projects/cool-projects/personal-portfolio/PersonalPortfolio";
-import GPATracker from "../routes/projects/cool-projects/tracker/GPATracker";
-import CssCube from "../routes/projects/cool-projects/css-cube/CssCube";
-import AudioVisualizer from "../routes/projects/cool-projects/audio-visualizer/AudioVisualizer";
-import GameOfLife from "../routes/projects/cool-projects/game-of-life/GameOfLife";
-import ControlTrelloDroneWithNode from "../routes/projects/cool-projects/control-trello-drone-with-node/ControlTrelloDroneWithNode";
-import PersonalBlog from "../routes/projects/cool-projects/personal-blog/PersonalBlog";
-import PasswordGenerator from "../routes/projects/cool-projects/password-generator/PasswordGenerator";
-import FileOrganizer from "../routes/projects/cool-projects/file-organizer/FileOrganizer";
-import PageScraper from "../routes/projects/cool-projects/page-scraper/PageScraper";
-import AlarmClock from "../routes/projects/cool-projects/alarm-clock/AlarmClock";
-import MP3Player from "../routes/projects/cool-projects/mp3-player/MP3Player";
-import GifCreator from "../routes/projects/cool-projects/gif-creator/GifCreator";
-import LearningPlatform from "../routes/projects/cool-projects/learning-platform/LearningPlatform";
-import MarkdownToHTML from "../routes/projects/cool-projects/markdown-to-html/MarkdownToHTML";
-import DesktopGUI from "../routes/projects/cool-projects/desktop/DesktopGUI";
-import ContentAggregator from "../routes/projects/cool-projects/content-aggregator/ContentAggregator";
-import RecipeForHomeIngredients from "../routes/projects/cool-projects/recipe-for-home-ingredients/RecipeForHomeIngredients";
-import StockPorfolioTracker from "../routes/projects/cool-projects/stock-porfolio-tracker/StockPorfolioTracker";
-import VideoEditor from "../routes/projects/cool-projects/video-editor/VideoEditor";
+import TwitterBot from "routes/projects/bots/twitter-bot/TwitterBot";
+import SlackBot from "routes/projects/bots/slack-bot/SlackBot";
+import DiscordBot from "routes/projects/bots/discord-bot/DiscordBot";
+import InstagramBot from "routes/projects/bots/instagram-bot/InstagramBot";
+import BotHelpsWithDisabilities from "routes/projects/bots/bot-helps-with-disabilities/BotHelpsWithDisabilities";
+import ApplyLinkedinEasyApplyJobs from "routes/projects/bots/apply-linkedin-easy-apply-jobs/ApplyLinkedinEasyApplyJobs";
 
-import TwitterBot from "../routes/projects/bots/twitter-bot/TwitterBot";
-import SlackBot from "../routes/projects/bots/slack-bot/SlackBot";
-import DiscordBot from "../routes/projects/bots/discord-bot/DiscordBot";
-import InstagramBot from "../routes/projects/bots/instagram-bot/InstagramBot";
-import BotHelpsWithDisabilities from "../routes/projects/bots/bot-helps-with-disabilities/BotHelpsWithDisabilities";
-import ApplyLinkedinEasyApplyJobs from "../routes/projects/bots/apply-linkedin-easy-apply-jobs/ApplyLinkedinEasyApplyJobs";
-
-import RomanNumeralConverters from "../routes/projects/challenges/roman-numeral-converters/RomanNumeralConverters";
-import CreditCardValidator from "../routes/projects/challenges/credit-card-validator/CreditCardValidator";
+import RomanNumeralConverters from "routes/projects/challenges/roman-numeral-converters/RomanNumeralConverters";
+import CreditCardValidator from "routes/projects/challenges/credit-card-validator/CreditCardValidator";
 
 export const anchors = [
   {
@@ -118,12 +114,13 @@ export const projects = [
       {
         path: "simple-projects",
         category: "Simple Projects",
+        color: "wheat",
         children: [
           {
-            path: "daily-reading-plan",
-            title: "Daily Reading Plan",
-            status: "tbd",
-            element: <DailyReadingPlan />,
+            path: "calendar",
+            title: "Calendar",
+            status: "progress",
+            element: <Calendar />,
           },
           {
             path: "quiz",
@@ -132,28 +129,10 @@ export const projects = [
             element: <Quiz />,
           },
           {
-            path: "etch-sketch",
-            title: "Etch a Sketch",
-            status: "progress",
-            element: <EtchASketch />,
-          },
-          {
             path: "calculator",
             title: "Calculator",
             status: "done",
             element: <Calculator />,
-          },
-          {
-            path: "form-validation",
-            title: "Form Validation",
-            status: "tbd",
-            element: <FormValidation />,
-          },
-          {
-            path: "library",
-            title: "Library",
-            status: "tbd",
-            element: <Library />,
           },
           {
             path: "weather-website",
@@ -184,125 +163,37 @@ export const projects = [
       {
         path: "challenges",
         category: "Challenges",
+        color: "lightskyblue",
         children: [
           {
             path: "roman-numeral-converters",
             title: "Roman Numeral Converters",
-            status: "done",
+            status: "tbd",
             element: <RomanNumeralConverters />,
           },
           {
             path: "credit-card-validator",
             title: "Credit Card Validator",
-            status: "done",
+            status: "tbd",
             element: <CreditCardValidator />,
-          },
-        ],
-      },
-      {
-        path: "games",
-        category: "Games",
-        children: [
-          {
-            path: "chess",
-            title: "Chess",
-            status: "tbd",
-            element: <Chess />,
-          },
-          {
-            path: "2d-zombie-game",
-            title: "2D Zombie Game",
-            status: "tbd",
-            element: <ZombieGame />,
-          },
-          {
-            path: "minesweeper",
-            title: "Minesweeper",
-            status: "progress",
-            element: <Minesweeper />,
-          },
-          {
-            path: "mario",
-            title: "Mario",
-            status: "progress",
-            element: <Mario />,
-          },
-          {
-            path: "battleship",
-            title: "BattleShip",
-            status: "done",
-            element: <BattleShip />,
-          },
-          {
-            path: "tic-tac-toe",
-            title: "Tic-Tac-Toe",
-            status: "progress",
-            element: <TicTacToe />,
-          },
-          {
-            path: "rock-paper-scissors",
-            title: "Rock-Paper-Scissors",
-            status: "done",
-            element: <RockPaperScissors />,
-          },
-          {
-            path: "own-platformer-game",
-            title: "Own Platformer Game",
-            status: "tbd",
-            element: <OwnPlatformerGame />,
-          },
-          {
-            path: "programming-concept",
-            title: "Programming Concept",
-            status: "tbd",
-            element: <ProgrammingConcept />,
-          },
-          {
-            path: "hangman",
-            title: "Hangman",
-            status: "done",
-            element: <Hangman />,
-          },
-          {
-            path: "pacman",
-            title: "Pacman",
-            status: "progress",
-            element: <Pacman />,
-          },
-          {
-            path: "ping-pong",
-            title: "Ping Pong",
-            status: "progress",
-            element: <PingPong />,
-          },
-          {
-            path: "tetris",
-            title: "Tetris",
-            status: "tbd",
-            element: <Tetris />,
-          },
-          {
-            path: "guess-my-sketch",
-            title: "Guess My Sketch",
-            status: "tbd",
-            element: <GuessMySketch />,
           },
         ],
       },
       {
         path: "networking",
         category: "Networking",
+        color: "#fba3ff",
         children: [
           {
             path: "zip-postal-code-lookup",
             title: "Zip Postal Code Lookup",
-            status: "done",
+            status: "tbd",
             element: <ZipPostalCodeLookup />,
           },
           {
             path: "country-lookup",
             title: "Country Lookup",
-            status: "done",
+            status: "tbd",
             element: <CountryIPLookup />,
           },
         ],
@@ -310,11 +201,12 @@ export const projects = [
       {
         path: "personal-tools",
         category: "Personal Tools",
+        color: "#ff968e",
         children: [
           {
             path: "flex-box-generator",
             title: "Flex Box Generator",
-            status: "done",
+            status: "tbd",
             element: <FlexBoxGenerator />,
           },
           {
@@ -326,7 +218,7 @@ export const projects = [
           {
             path: "UISelect",
             title: "UI Select",
-            status: "done",
+            status: "tbd",
             element: <UISelect />,
           },
           {
@@ -343,7 +235,7 @@ export const projects = [
           },
           {
             path: "clip-generator",
-            title: "path Generator",
+            title: "Clip-path Generator",
             status: "tbd",
             element: <ClipPathGenerator />,
           },
@@ -380,134 +272,9 @@ export const projects = [
         ],
       },
       {
-        path: "online",
-        category: "Online",
-        children: [
-          {
-            path: "online-whiteboard",
-            title: "Online Whiteboard",
-            status: "tbd",
-            element: <OnlineWhiteboard />,
-          },
-          {
-            path: "gamified-habit-tracker",
-            title: "Gamified Habit Tracker",
-            status: "tbd",
-            element: <GamifiedHabitTracker />,
-          },
-          {
-            path: "real-time-chat-app",
-            title: "Real Time Chat App",
-            status: "tbd",
-            element: <RealTimeChatApp />,
-          },
-          {
-            path: "video-chat",
-            title: "Video Chat",
-            status: "tbd",
-            element: <VideoChat />,
-          },
-        ],
-      },
-      {
-        path: "machine-learning",
-        category: "Machine Learning",
-        children: [
-          {
-            path: "password-cracker",
-            title: "Password Cracker",
-            status: "tbd",
-            element: <PasswordCracker />,
-          },
-          {
-            path: "convert-sign-language-to-text",
-            title: "Convert Sign Language to Text",
-            status: "tbd",
-            element: <ConvertSignLanguageToText />,
-          },
-          {
-            path: "handwritten-todos-to-google-calendar",
-            title: "Handwritten Todos to Google Calendar",
-            status: "tbd",
-            element: <HandwrittenTodosToGoogleCalendar />,
-          },
-          {
-            path: "grade-your-own-essay",
-            title: "Grade Your Own Essay",
-            status: "tbd",
-            element: <GradeYourOwnEssay />,
-          },
-          {
-            path: "insert-appointments-google-calendar",
-            title: "Insert Appointments Google Calendar",
-            status: "tbd",
-            element: <InsertAppointmentsGoogleCalendar />,
-          },
-        ],
-      },
-      {
-        path: "clone-front",
-        category: "Clone Front",
-        children: [
-          {
-            path: "design-free-frontend-mentor",
-            title: "Design Free Frontend Mentor",
-            status: "tbd",
-            element: <DesignFreeFrontendMentor />,
-          },
-          {
-            path: "design-on-awwwards",
-            title: "Design On Awwwards",
-            status: "tbd",
-            element: <DesignOnAwwwards />,
-          },
-        ],
-      },
-      {
-        path: "clone-full-stack",
-        category: "Clone Full Stack",
-        children: [
-          {
-            path: "rebuild-netflix",
-            title: "Rebuild Netflix",
-            status: "tbd",
-            element: <RebuildNetflix />,
-          },
-          {
-            path: "rebuild-facebook",
-            title: "Rebuild Facebook",
-            status: "tbd",
-            element: <RebuildFacebook />,
-          },
-          {
-            path: "rebuild-instagram",
-            title: "Rebuild Instagram",
-            status: "tbd",
-            element: <RebuildInstagram />,
-          },
-          {
-            path: "rebuild-google-calendar",
-            title: "Rebuild Google Calendar",
-            status: "tbd",
-            element: <RebuildGoogleCalendar />,
-          },
-          {
-            path: "rebuild-trello",
-            title: "Rebuild Trello",
-            status: "tbd",
-            element: <RebuildTrello />,
-          },
-          {
-            path: "rebuild-feather-icons",
-            title: "Rebuild Feather Icons",
-            status: "tbd",
-            element: <RebuildFeatherIcons />,
-          },
-        ],
-      },
-      {
         path: "cool-projects",
         category: "Cool Projects",
+        color: "#a06af9",
         children: [
           {
             path: "photography-portfolio",
@@ -542,7 +309,7 @@ export const projects = [
           {
             path: "audio-visualizer",
             title: "Audio Visualizer",
-            status: "progress",
+            status: "tbd",
             element: <AudioVisualizer />,
           },
           {
@@ -566,7 +333,7 @@ export const projects = [
           {
             path: "password-generator",
             title: "Password Generator",
-            status: "done",
+            status: "tbd",
             element: <PasswordGenerator />,
           },
           {
@@ -632,7 +399,7 @@ export const projects = [
           {
             path: "stock-porfolio-tracker",
             title: "Stock Porfolio Tracker",
-            status: "progress",
+            status: "tbd",
             element: <StockPorfolioTracker />,
           },
           {
@@ -644,8 +411,223 @@ export const projects = [
         ],
       },
       {
+        path: "games",
+        category: "Games",
+        color: "#a5f59c",
+        children: [
+          {
+            path: "chess",
+            title: "Chess",
+            status: "tbd",
+            element: <Chess />,
+          },
+          {
+            path: "2d-zombie-game",
+            title: "2D Zombie Game",
+            status: "tbd",
+            element: <ZombieGame />,
+          },
+          {
+            path: "minesweeper",
+            title: "Minesweeper",
+            status: "tbd",
+            element: <Minesweeper />,
+          },
+          {
+            path: "mario",
+            title: "Mario",
+            status: "tbd",
+            element: <Mario />,
+          },
+          {
+            path: "battleship",
+            title: "BattleShip",
+            status: "tbd",
+            element: <BattleShip />,
+          },
+          {
+            path: "tic-tac-toe",
+            title: "Tic-Tac-Toe",
+            status: "tbd",
+            element: <TicTacToe />,
+          },
+          {
+            path: "rock-paper-scissors",
+            title: "Rock-Paper-Scissors",
+            status: "tbd",
+            element: <RockPaperScissors />,
+          },
+          {
+            path: "own-platformer-game",
+            title: "Own Platformer Game",
+            status: "tbd",
+            element: <OwnPlatformerGame />,
+          },
+          {
+            path: "programming-concept",
+            title: "Programming Concept",
+            status: "tbd",
+            element: <ProgrammingConcept />,
+          },
+          {
+            path: "hangman",
+            title: "Hangman",
+            status: "tbd",
+            element: <Hangman />,
+          },
+          {
+            path: "pacman",
+            title: "Pacman",
+            status: "tbd",
+            element: <Pacman />,
+          },
+          {
+            path: "ping-pong",
+            title: "Ping Pong",
+            status: "tbd",
+            element: <PingPong />,
+          },
+          {
+            path: "tetris",
+            title: "Tetris",
+            status: "tbd",
+            element: <Tetris />,
+          },
+          {
+            path: "guess-my-sketch",
+            title: "Guess My Sketch",
+            status: "tbd",
+            element: <GuessMySketch />,
+          },
+        ],
+      },
+      {
+        path: "clone-front",
+        category: "Clone Front",
+        color: "#94f0f0",
+        children: [
+          {
+            path: "rebuild-netflix",
+            title: "Rebuild Netflix",
+            status: "tbd",
+            element: <RebuildNetflix />,
+          },
+          {
+            path: "rebuild-facebook",
+            title: "Rebuild Facebook",
+            status: "tbd",
+            element: <RebuildFacebook />,
+          },
+          {
+            path: "rebuild-instagram",
+            title: "Rebuild Instagram",
+            status: "tbd",
+            element: <RebuildInstagram />,
+          },
+          {
+            path: "rebuild-google-calendar",
+            title: "Rebuild Google Calendar",
+            status: "tbd",
+            element: <RebuildGoogleCalendar />,
+          },
+          {
+            path: "rebuild-trello",
+            title: "Rebuild Trello",
+            status: "tbd",
+            element: <RebuildTrello />,
+          },
+          {
+            path: "rebuild-feather-icons",
+            title: "Rebuild Feather Icons",
+            status: "tbd",
+            element: <RebuildFeatherIcons />,
+          },
+          {
+            path: "design-free-frontend-mentor",
+            title: "Design Free Frontend Mentor",
+            status: "tbd",
+            element: <DesignFreeFrontendMentor />,
+          },
+          {
+            path: "design-on-awwwards",
+            title: "Design On Awwwards",
+            status: "tbd",
+            element: <DesignOnAwwwards />,
+          },
+        ],
+      },
+      {
+        path: "online",
+        category: "Online",
+        color: "#5d9a56",
+        children: [
+          {
+            path: "online-whiteboard",
+            title: "Online Whiteboard",
+            status: "tbd",
+            element: <OnlineWhiteboard />,
+          },
+          {
+            path: "gamified-habit-tracker",
+            title: "Gamified Habit Tracker",
+            status: "tbd",
+            element: <GamifiedHabitTracker />,
+          },
+          {
+            path: "real-time-chat-app",
+            title: "Real Time Chat App",
+            status: "tbd",
+            element: <RealTimeChatApp />,
+          },
+          {
+            path: "video-chat",
+            title: "Video Chat",
+            status: "tbd",
+            element: <VideoChat />,
+          },
+        ],
+      },
+      {
+        path: "machine-learning",
+        category: "Machine Learning",
+        color: "#ffdd72",
+        children: [
+          {
+            path: "password-cracker",
+            title: "Password Cracker",
+            status: "tbd",
+            element: <PasswordCracker />,
+          },
+          {
+            path: "convert-sign-language-to-text",
+            title: "Convert Sign Language to Text",
+            status: "tbd",
+            element: <ConvertSignLanguageToText />,
+          },
+          {
+            path: "handwritten-todos-to-google-calendar",
+            title: "Handwritten Todos to Google Calendar",
+            status: "tbd",
+            element: <HandwrittenTodosToGoogleCalendar />,
+          },
+          {
+            path: "grade-your-own-essay",
+            title: "Grade Your Own Essay",
+            status: "tbd",
+            element: <GradeYourOwnEssay />,
+          },
+          {
+            path: "insert-appointments-google-calendar",
+            title: "Insert Appointments Google Calendar",
+            status: "tbd",
+            element: <InsertAppointmentsGoogleCalendar />,
+          },
+        ],
+      },
+      {
         path: "bots",
         category: "Bots",
+        color: "#386dd9",
         children: [
           {
             path: "twitter-bot",

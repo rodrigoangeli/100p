@@ -1,10 +1,6 @@
 import Dialog from "@mui/material/Dialog";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  closeModal,
-  selectModalState,
-  selectModalOptions,
-} from "../store/modal";
+import { closeModal, selectModalState, selectModalOptions } from "store/modal";
 
 function Modal(props) {
   const dispatch = useDispatch();

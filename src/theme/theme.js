@@ -1,6 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import { memo, useEffect, useLayoutEffect } from "react";
-import theme from "../configs/theme";
+import { theme, mui } from "configs/theme";
+import * as Provider from "@mui/material/styles";
 
 function Theme(props) {
   useEffect(() => {
@@ -8,7 +9,13 @@ function Theme(props) {
     document.body.classList.remove(mode === 'light' ? 'dark' : 'light'); */
     document.body.classList.add("dark");
   }, []);
-  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <Provider.ThemeProvider theme={mui}>
+        {props.children}
+      </Provider.ThemeProvider>
+    </ThemeProvider>
+  );
 }
 
 export default memo(Theme);
