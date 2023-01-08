@@ -30,6 +30,6 @@ export const Icon = styled(SvgIcon)(({ theme }) => ({
   transition: "color 250ms ease",
   marginLeft: "5px",
   "&:hover": {
-    color: "#e36049",
+    color: theme.status.background.error,
   },
 }));

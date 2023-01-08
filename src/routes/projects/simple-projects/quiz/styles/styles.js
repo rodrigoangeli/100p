@@ -33,7 +33,10 @@ export const Score = styled("h1")(({ theme }) => ({
 }));
 
 export const Icon = styled(SvgIcon)(({ theme, answerResult }) => ({
-  color: answerResult === "check" ? "#7fbd6a" : "#e36049",
+  color:
+    answerResult === "check"
+      ? theme.status.background.done
+      : theme.status.background.error,
   margin: "0 auto",
   width: 120,
 }));

@@ -31,17 +31,17 @@ const Home = (props) => {
     {
       label: "All Projects",
       value: "all",
-      count: null,
+      count: 0,
     },
     {
       label: "In Progress",
       value: "progress",
-      count: null,
+      count: 0,
     },
     {
       label: "Completed",
       value: "done",
-      count: null,
+      count: 0,
     },
   ]);
   const [currentTab, setCurrentTab] = useState("all");

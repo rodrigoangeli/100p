@@ -168,13 +168,13 @@ export const projects = [
           {
             path: "roman-numeral-converters",
             title: "Roman Numeral Converters",
-            status: "tbd",
+            status: "done",
             element: <RomanNumeralConverters />,
           },
           {
             path: "credit-card-validator",
             title: "Credit Card Validator",
-            status: "tbd",
+            status: "done",
             element: <CreditCardValidator />,
           },
         ],
@@ -187,13 +187,13 @@ export const projects = [
           {
             path: "zip-postal-code-lookup",
             title: "Zip Postal Code Lookup",
-            status: "tbd",
+            status: "done",
             element: <ZipPostalCodeLookup />,
           },
           {
             path: "country-lookup",
             title: "Country Lookup",
-            status: "tbd",
+            status: "done",
             element: <CountryIPLookup />,
           },
         ],

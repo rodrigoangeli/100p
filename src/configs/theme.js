@@ -38,11 +38,13 @@ export const theme = {
       tbd: "#262a34",
       progress: "#6a93bd",
       done: "#7fbd6a",
+      error: "#e36049",
     },
     color: {
       tbd: "#646879",
       progress: "white",
       done: "white",
+      error: "white",
     },
   },
 };
@@ -128,6 +130,13 @@ export const mui = createTheme({
           "&:before, &:after": {
             display: "none",
           },
+        },
+      },
+    },
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: {
+          color: theme.palette.text.main,
         },
       },
     },
