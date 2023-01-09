@@ -12,6 +12,7 @@ import TodoList from "routes/projects/simple-projects/todo-list/TodoList";
 import Pomodoro from "routes/projects/simple-projects/pomodoro/Pomodoro";
 import GridPicturesAnimals from "routes/projects/simple-projects/grid-pictures-animals/GridPicturesAnimals";
 
+import CardMemoryGame from "routes/projects/games/card-memory-game/CardMemoryGame";
 import Chess from "routes/projects/games/chess/Chess";
 import ZombieGame from "routes/projects/games/2d-zombie-game/ZombieGame";
 import Minesweeper from "routes/projects/games/minesweeper/Minesweeper";
@@ -37,22 +38,8 @@ import UISelect from "routes/projects/personal-tools/UISelect/UISelect";
 import CssLoaders from "routes/projects/personal-tools/css-loaders/CssLoaders";
 import NoteTaker from "routes/projects/personal-tools/note-taker/NoteTaker";
 import ClipPathGenerator from "routes/projects/personal-tools/clip-generator/ClipPathGenerator";
-import NoteTakerForProgrammers from "routes/projects/personal-tools/note-taker-for-programmers/NoteTakerForProgrammers";
 import BudgetTracker from "routes/projects/personal-tools/budget-tracker/BudgetTracker";
-import ScriptToOrderPizza from "routes/projects/personal-tools/script-to-order-pizza/ScriptToOrderPizza";
 import KanbanBoard from "routes/projects/personal-tools/kanban-board/KanbanBoard";
-import ExportNotionToBlog from "routes/projects/personal-tools/export-notion-to-blog/ExportNotionToBlog";
-
-import OnlineWhiteboard from "routes/projects/online/online-whiteboard/OnlineWhiteboard";
-import GamifiedHabitTracker from "routes/projects/online/gamified-habit-tracker/GamifiedHabitTracker";
-import RealTimeChatApp from "routes/projects/online/real-time-chat-app/RealTimeChatApp";
-import VideoChat from "routes/projects/online/video-chat/VideoChat";
-
-import PasswordCracker from "routes/projects/machine-learning/password-cracker/PasswordCracker";
-import ConvertSignLanguageToText from "routes/projects/machine-learning/convert-sign-language-to-text/ConvertSignLanguageToText";
-import HandwrittenTodosToGoogleCalendar from "routes/projects/machine-learning/handwritten-todos-to-google-calendar/HandwrittenTodosToGoogleCalendar";
-import GradeYourOwnEssay from "routes/projects/machine-learning/grade-your-own-essay/GradeYourOwnEssay";
-import InsertAppointmentsGoogleCalendar from "routes/projects/machine-learning/insert-appointments-google-calendar/InsertAppointmentsGoogleCalendar";
 
 import DesignFreeFrontendMentor from "routes/projects/clone-front/design-free-frontend-mentor/DesignFreeFrontendMentor";
 import DesignOnAwwwards from "routes/projects/clone-front/design-on-awwwards/DesignOnAwwwards";
@@ -63,34 +50,18 @@ import RebuildGoogleCalendar from "routes/projects/clone-front/rebuild-google-ca
 import RebuildTrello from "routes/projects/clone-front/rebuild-trello/RebuildTrello";
 import RebuildFeatherIcons from "routes/projects/clone-front/rebuild-feather-icons/RebuildFeatherIcons";
 
-import PhotographyPortfolio from "routes/projects/cool-projects/photography-portfolio/PhotographyPortfolio";
-import PersonalPortfolio from "routes/projects/cool-projects/personal-portfolio/PersonalPortfolio";
-import GPATracker from "routes/projects/cool-projects/tracker/GPATracker";
 import CssCube from "routes/projects/cool-projects/css-cube/CssCube";
 import AudioVisualizer from "routes/projects/cool-projects/audio-visualizer/AudioVisualizer";
 import GameOfLife from "routes/projects/cool-projects/game-of-life/GameOfLife";
-import ControlTrelloDroneWithNode from "routes/projects/cool-projects/control-trello-drone-with-node/ControlTrelloDroneWithNode";
-import PersonalBlog from "routes/projects/cool-projects/personal-blog/PersonalBlog";
 import PasswordGenerator from "routes/projects/cool-projects/password-generator/PasswordGenerator";
 import FileOrganizer from "routes/projects/cool-projects/file-organizer/FileOrganizer";
-import PageScraper from "routes/projects/cool-projects/page-scraper/PageScraper";
 import AlarmClock from "routes/projects/cool-projects/alarm-clock/AlarmClock";
 import MP3Player from "routes/projects/cool-projects/mp3-player/MP3Player";
 import GifCreator from "routes/projects/cool-projects/gif-creator/GifCreator";
-import LearningPlatform from "routes/projects/cool-projects/learning-platform/LearningPlatform";
 import MarkdownToHTML from "routes/projects/cool-projects/markdown-to-html/MarkdownToHTML";
 import DesktopGUI from "routes/projects/cool-projects/desktop/DesktopGUI";
-import ContentAggregator from "routes/projects/cool-projects/content-aggregator/ContentAggregator";
 import RecipeForHomeIngredients from "routes/projects/cool-projects/recipe-for-home-ingredients/RecipeForHomeIngredients";
 import StockPorfolioTracker from "routes/projects/cool-projects/stock-porfolio-tracker/StockPorfolioTracker";
-import VideoEditor from "routes/projects/cool-projects/video-editor/VideoEditor";
-
-import TwitterBot from "routes/projects/bots/twitter-bot/TwitterBot";
-import SlackBot from "routes/projects/bots/slack-bot/SlackBot";
-import DiscordBot from "routes/projects/bots/discord-bot/DiscordBot";
-import InstagramBot from "routes/projects/bots/instagram-bot/InstagramBot";
-import BotHelpsWithDisabilities from "routes/projects/bots/bot-helps-with-disabilities/BotHelpsWithDisabilities";
-import ApplyLinkedinEasyApplyJobs from "routes/projects/bots/apply-linkedin-easy-apply-jobs/ApplyLinkedinEasyApplyJobs";
 
 import RomanNumeralConverters from "routes/projects/challenges/roman-numeral-converters/RomanNumeralConverters";
 import CreditCardValidator from "routes/projects/challenges/credit-card-validator/CreditCardValidator";
@@ -206,7 +177,7 @@ export const projects = [
           {
             path: "flex-box-generator",
             title: "Flex Box Generator",
-            status: "tbd",
+            status: "done",
             element: <FlexBoxGenerator />,
           },
           {
@@ -239,35 +210,19 @@ export const projects = [
             status: "tbd",
             element: <ClipPathGenerator />,
           },
-          {
-            path: "note-taker-for-programmers",
-            title: "Note Taker for Programmers",
-            status: "tbd",
-            element: <NoteTakerForProgrammers />,
-          },
+
           {
             path: "budget-tracker",
             title: "Budget Tracker",
             status: "tbd",
             element: <BudgetTracker />,
           },
-          {
-            path: "script-to-order-pizza",
-            title: "Script to Order Pizza",
-            status: "tbd",
-            element: <ScriptToOrderPizza />,
-          },
+
           {
             path: "kanban-board",
             title: "Kanban Board",
             status: "tbd",
             element: <KanbanBoard />,
-          },
-          {
-            path: "export-notion-to-blog",
-            title: "Export Notion to Blog",
-            status: "tbd",
-            element: <ExportNotionToBlog />,
           },
         ],
       },
@@ -276,30 +231,6 @@ export const projects = [
         category: "Cool Projects",
         color: "#a06af9",
         children: [
-          {
-            path: "photography-portfolio",
-            title: "Photography Portfolio",
-            status: "tbd",
-            element: <PhotographyPortfolio />,
-          },
-          {
-            path: "personal-portfolio",
-            title: "Personal Portfolio",
-            status: "tbd",
-            element: <PersonalPortfolio />,
-          },
-          {
-            path: "tracker",
-            title: "G.P.A Tracker",
-            status: "tbd",
-            element: <GPATracker />,
-          },
-          {
-            path: "emulator-retro-games",
-            title: "Emulator Retro Games",
-            status: "tbd",
-            element: <EmulatorRetroGames />,
-          },
           {
             path: "css-cube",
             title: "CSS Cube",
@@ -319,18 +250,6 @@ export const projects = [
             element: <GameOfLife />,
           },
           {
-            path: "control-trello-drone-with-node",
-            title: "Control Trello Drone With Node",
-            status: "tbd",
-            element: <ControlTrelloDroneWithNode />,
-          },
-          {
-            path: "personal-blog",
-            title: "Personal Blog",
-            status: "tbd",
-            element: <PersonalBlog />,
-          },
-          {
             path: "password-generator",
             title: "Password Generator",
             status: "tbd",
@@ -342,12 +261,7 @@ export const projects = [
             status: "tbd",
             element: <FileOrganizer />,
           },
-          {
-            path: "page-scraper",
-            title: "Page Scraper",
-            status: "tbd",
-            element: <PageScraper />,
-          },
+
           {
             path: "alarm-clock",
             title: "Alarm Clock",
@@ -367,12 +281,6 @@ export const projects = [
             element: <GifCreator />,
           },
           {
-            path: "learning-platform",
-            title: "Learning Platform",
-            status: "tbd",
-            element: <LearningPlatform />,
-          },
-          {
             path: "markdown-to",
             title: "Markdown to HTML",
             status: "tbd",
@@ -383,12 +291,6 @@ export const projects = [
             title: "Desktop GUI",
             status: "tbd",
             element: <DesktopGUI />,
-          },
-          {
-            path: "content-aggregator",
-            title: "Content Aggregator",
-            status: "tbd",
-            element: <ContentAggregator />,
           },
           {
             path: "recipe-for-home-ingredients",
@@ -402,12 +304,6 @@ export const projects = [
             status: "tbd",
             element: <StockPorfolioTracker />,
           },
-          {
-            path: "video-editor",
-            title: "Video Editor",
-            status: "tbd",
-            element: <VideoEditor />,
-          },
         ],
       },
       {
@@ -416,11 +312,18 @@ export const projects = [
         color: "#a5f59c",
         children: [
           {
+            path: "card-memory-game",
+            title: "Card Memory Game",
+            status: "tbd",
+            element: <CardMemoryGame />,
+          },
+          {
             path: "chess",
             title: "Chess",
             status: "tbd",
             element: <Chess />,
           },
+
           {
             path: "2d-zombie-game",
             title: "2D Zombie Game",
@@ -499,6 +402,12 @@ export const projects = [
             status: "tbd",
             element: <GuessMySketch />,
           },
+          {
+            path: "emulator-retro-games",
+            title: "Emulator Retro Games",
+            status: "tbd",
+            element: <EmulatorRetroGames />,
+          },
         ],
       },
       {
@@ -553,117 +462,6 @@ export const projects = [
             title: "Design On Awwwards",
             status: "tbd",
             element: <DesignOnAwwwards />,
-          },
-        ],
-      },
-      {
-        path: "online",
-        category: "Online",
-        color: "#5d9a56",
-        children: [
-          {
-            path: "online-whiteboard",
-            title: "Online Whiteboard",
-            status: "tbd",
-            element: <OnlineWhiteboard />,
-          },
-          {
-            path: "gamified-habit-tracker",
-            title: "Gamified Habit Tracker",
-            status: "tbd",
-            element: <GamifiedHabitTracker />,
-          },
-          {
-            path: "real-time-chat-app",
-            title: "Real Time Chat App",
-            status: "tbd",
-            element: <RealTimeChatApp />,
-          },
-          {
-            path: "video-chat",
-            title: "Video Chat",
-            status: "tbd",
-            element: <VideoChat />,
-          },
-        ],
-      },
-      {
-        path: "machine-learning",
-        category: "Machine Learning",
-        color: "#ffdd72",
-        children: [
-          {
-            path: "password-cracker",
-            title: "Password Cracker",
-            status: "tbd",
-            element: <PasswordCracker />,
-          },
-          {
-            path: "convert-sign-language-to-text",
-            title: "Convert Sign Language to Text",
-            status: "tbd",
-            element: <ConvertSignLanguageToText />,
-          },
-          {
-            path: "handwritten-todos-to-google-calendar",
-            title: "Handwritten Todos to Google Calendar",
-            status: "tbd",
-            element: <HandwrittenTodosToGoogleCalendar />,
-          },
-          {
-            path: "grade-your-own-essay",
-            title: "Grade Your Own Essay",
-            status: "tbd",
-            element: <GradeYourOwnEssay />,
-          },
-          {
-            path: "insert-appointments-google-calendar",
-            title: "Insert Appointments Google Calendar",
-            status: "tbd",
-            element: <InsertAppointmentsGoogleCalendar />,
-          },
-        ],
-      },
-      {
-        path: "bots",
-        category: "Bots",
-        color: "#386dd9",
-        children: [
-          {
-            path: "twitter-bot",
-            title: "Twitter Bot",
-            status: "tbd",
-            element: <TwitterBot />,
-          },
-          {
-            path: "slack-bot",
-            title: "Slack Bot",
-            status: "tbd",
-            element: <SlackBot />,
-          },
-          {
-            path: "discord-bot",
-            title: "Discord Bot",
-            status: "tbd",
-            element: <DiscordBot />,
-          },
-          {
-            path: "instagram-bot",
-            title: "Instagram Bot",
-            status: "tbd",
-            element: <InstagramBot />,
-          },
-          {
-            path: "bot-helps-with-disabilities",
-            title: "Bot Helps With Disabilities",
-            status: "tbd",
-            element: <BotHelpsWithDisabilities />,
-          },
-          {
-            path: "apply-linkedin-easy-apply-jobs",
-            title: "Apply Linkedin Easy Apply Jobs",
-            status: "tbd",
-            element: <ApplyLinkedinEasyApplyJobs />,
           },
         ],
       },

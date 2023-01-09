@@ -23,6 +23,7 @@ export const theme = {
       },
     },
     text: {
+      primary: "#8500ff",
       main: "#646879",
     },
     border: {
