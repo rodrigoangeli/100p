@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SvgIcon from "components/SvgIcon";
+import { TextField } from "@mui/material";
 
 export const BoxCard = styled("div")(({ theme }) => ({
   background: theme.palette.background.light,
@@ -54,8 +55,7 @@ export const AllElements = styled("main")(({ theme, config }) => ({
   border: `1px solid ${theme.palette.border.main}`,
   height: "100%",
   padding: 8,
-  display: "flex",
-  cursor: "pointer",
+  display: "grid",
 
   "&.active": {
     borderColor: theme.palette.text.primary,
@@ -71,21 +71,15 @@ export const Element = styled("div")(({ theme }) => ({
   lineHeight: 1,
   color: theme.palette.common.white,
   margin: 5,
+  padding: 20,
+  /*  height: 70,
+  width: 70, */
   position: "relative",
-  cursor: "pointer",
   "& > span": {
     position: "absolute",
     left: "50%",
     top: "50%",
     transform: "translateX(-50%) translateY(-50%)",
-  },
-
-  "&.active": {
-    backgroundColor: theme.palette.text.primary,
-  },
-
-  "&:not(.active):hover": {
-    backgroundColor: theme.palette.background.hover.main,
   },
 }));
 
@@ -135,4 +129,32 @@ export const Code = styled("code")(({ theme }) => ({
   borderRadius: theme.border.radius,
   color: "#E5FA76",
   display: "block",
+}));
+
+export const StyledTextField = styled(TextField)(({ theme }) => ({
+  marginTop: "4px!important",
+  "& > div": {
+    paddingRight: 0,
+  },
+  "& input, & div[role='button']": {
+    paddingTop: "8px",
+    paddingBottom: "8px",
+  },
+}));
+
+export const OptionTextField = styled(TextField)(({ theme }) => ({
+  "& > div": {
+    "& > div": {
+      padding: "6.5px 14px",
+      color: theme.palette.text.main,
+    },
+    "& > fieldset": {
+      borderColor: "transparent",
+    },
+    "&:hover": {
+      "& > fieldset": {
+        borderColor: "transparent!important",
+      },
+    },
+  },
 }));

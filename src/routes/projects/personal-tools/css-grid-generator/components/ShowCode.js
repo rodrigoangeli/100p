@@ -21,14 +21,9 @@ export const ShowCode = ({ container, childs }) => {
             <DialogContent>
               <CodeBox>
                 <Code>{`
-              .flex-container${JSON.stringify(container)
+              .grid-container${JSON.stringify(container)
                 .replaceAll(",", ";")
                 .replaceAll(`"`, "")}`}</Code>
-                {childs.map((code, index) => (
-                  <Code>{`.flex-child-${index + 1}${JSON.stringify(code)
-                    .replaceAll(",", ";")
-                    .replaceAll(`"`, "")}`}</Code>
-                ))}
               </CodeBox>
             </DialogContent>
             <DialogActions>

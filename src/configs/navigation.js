@@ -34,7 +34,6 @@ import CountryIPLookup from "routes/projects/networking/country-lookup/CountryIP
 
 import FlexBoxGenerator from "routes/projects/personal-tools/flex-box-generator/FlexBoxGenerator";
 import CssGridGenerator from "routes/projects/personal-tools/css-grid-generator/CssGridGenerator";
-import UISelect from "routes/projects/personal-tools/UISelect/UISelect";
 import CssLoaders from "routes/projects/personal-tools/css-loaders/CssLoaders";
 import NoteTaker from "routes/projects/personal-tools/note-taker/NoteTaker";
 import ClipPathGenerator from "routes/projects/personal-tools/clip-generator/ClipPathGenerator";
@@ -183,19 +182,13 @@ export const projects = [
           {
             path: "css-grid-generator",
             title: "CSS Grid Generator",
-            status: "tbd",
+            status: "done",
             element: <CssGridGenerator />,
-          },
-          {
-            path: "UISelect",
-            title: "UI Select",
-            status: "tbd",
-            element: <UISelect />,
           },
           {
             path: "css-loaders",
             title: "CSS Loaders",
-            status: "tbd",
+            status: "done",
             element: <CssLoaders />,
           },
           {

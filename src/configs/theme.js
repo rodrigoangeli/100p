@@ -141,6 +141,13 @@ export const mui = createTheme({
         },
       },
     },
+    MuiSelect: {
+      styleOverrides: {
+        icon: {
+          color: theme.palette.text.main,
+        },
+      },
+    },
     MuiInputLabel: {
       defaultProps: {
         color: "primary",

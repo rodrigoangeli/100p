@@ -38,6 +38,7 @@ export const options = {
 };
 
 export const optionsInitialState = {
+  display: "flex",
   "flex-direction": "row",
   "flex-wrap": "wrap",
   "justify-content": "flex-start",

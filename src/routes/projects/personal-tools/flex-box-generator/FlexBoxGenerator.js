@@ -57,10 +57,15 @@ const FlexBoxGenerator = (props) => {
       <div className="container px-8 mx-auto flex flex-grow flex-col">
         <Box className=" mb-2 flex items-center justify-between">
           <Box className="flex">
-            <Button disabled={childs.length === 1} onClick={handleRemoveChild}>
+            <Button
+              type="minus"
+              disabled={childs.length === 1}
+              onClick={handleRemoveChild}
+            >
               <Icon className="w-4 ">heroicons-outline:minus</Icon>
             </Button>
             <Button
+              type="plus"
               disabled={childs.length === 20}
               className="ml-1"
               onClick={handleNewChild}
@@ -89,69 +94,71 @@ const FlexBoxGenerator = (props) => {
           <ShowCode container={config} childs={childs} />
         </Box>
         <div className="flex flex-grow ">
-          <BoxCard className="w-2/6 flex content-start flex-wrap">
-            {activeChild === null
-              ? Object.keys(options).map((property, i) => (
-                  <div key={property} className="mb-3 w-full">
-                    <Chip>{property}</Chip>
-                    <ValuesField>
-                      {options[property].map((value, index) => (
-                        <Value
-                          key={`${property}_${value}`}
-                          className={clsx({
-                            active: config[property] === value,
-                          })}
-                          onClick={() => setConfig({ [property]: value })}
-                        >
-                          {value}
-                        </Value>
-                      ))}
-                    </ValuesField>
-                  </div>
-                ))
-              : Object.keys(childOptions).map((property, i) => (
-                  <div
-                    key={property}
-                    className={`mb-3 px-1 ${
-                      childOptions[property] ? "" : "basis-2/4"
-                    }`}
-                  >
-                    <Chip>{property}</Chip>
-                    <ValuesField>
-                      {childOptions[property] ? (
-                        childOptions[property].map((value, index) => (
+          <BoxCard className="w-2/6">
+            <div className="sticky top-4 flex content-start flex-wrap">
+              {activeChild === null
+                ? Object.keys(options).map((property, i) => (
+                    <div key={property} className="mb-3 w-full">
+                      <Chip>{property}</Chip>
+                      <ValuesField>
+                        {options[property].map((value, index) => (
                           <Value
                             key={`${property}_${value}`}
                             className={clsx({
-                              active: childs[activeChild][property] === value,
+                              active: config[property] === value,
                             })}
-                            onClick={() => handleChildConfig(property, value)}
+                            onClick={() => setConfig({ [property]: value })}
                           >
                             {value}
                           </Value>
-                        ))
-                      ) : (
-                        <FilledInput
-                          inputProps={{
-                            "aria-label": property,
-                          }}
-                          hiddenLabel
-                          size="small"
-                          sx={{
-                            "& > input": {
-                              paddingTop: "4px",
-                              paddingBottom: "4px",
-                            },
-                          }}
-                          onChange={(event) =>
-                            handleChildConfig(property, event.target.value)
-                          }
-                          value={childs[activeChild][property] || ""}
-                        />
-                      )}
-                    </ValuesField>
-                  </div>
-                ))}
+                        ))}
+                      </ValuesField>
+                    </div>
+                  ))
+                : Object.keys(childOptions).map((property, i) => (
+                    <div
+                      key={property}
+                      className={`mb-3 px-1 ${
+                        childOptions[property] ? "" : "basis-2/4"
+                      }`}
+                    >
+                      <Chip>{property}</Chip>
+                      <ValuesField>
+                        {childOptions[property] ? (
+                          childOptions[property].map((value, index) => (
+                            <Value
+                              key={`${property}_${value}`}
+                              className={clsx({
+                                active: childs[activeChild][property] === value,
+                              })}
+                              onClick={() => handleChildConfig(property, value)}
+                            >
+                              {value}
+                            </Value>
+                          ))
+                        ) : (
+                          <FilledInput
+                            inputProps={{
+                              "aria-label": property,
+                            }}
+                            hiddenLabel
+                            size="small"
+                            sx={{
+                              "& > input": {
+                                paddingTop: "4px",
+                                paddingBottom: "4px",
+                              },
+                            }}
+                            onChange={(event) =>
+                              handleChildConfig(property, event.target.value)
+                            }
+                            value={childs[activeChild][property] || ""}
+                          />
+                        )}
+                      </ValuesField>
+                    </div>
+                  ))}
+            </div>
           </BoxCard>
           <div className="ml-4 w-4/6">
             <BoxCard className="h-full">
